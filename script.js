@@ -10,9 +10,9 @@ document.addEventListener('mouseup', () => isMouseDown = false);
 // Add click handler to create the grid
 document.addEventListener('DOMContentLoaded', () => {
 
-   // Get references to our elements
-const startButton = document.getElementById('start');
-const grid = document.getElementById('grid');
+  // Get references to our elements
+  const startButton = document.getElementById('start');
+  const grid = document.getElementById('grid');
 
   // Clear any existing grid first
   grid.innerHTML = '';
@@ -22,10 +22,10 @@ const grid = document.getElementById('grid');
     const cell = document.createElement('div');
     cell.className = 'cell';
 
-if (Math.random() < INVERT_PROBABILITY) {
-   cell.classes.add("black");
-}
-     
+    if (Math.random() < INVERT_PROBABILITY) {
+      cell.classList.add("black");
+    }
+
     // Handle both click and drag events
     cell.addEventListener('mousedown', () => {
       cell.classList.toggle('black');
@@ -43,4 +43,3 @@ if (Math.random() < INVERT_PROBABILITY) {
   // Hide the start button after grid is created
   startButton.style.display = 'none';
 });
-
